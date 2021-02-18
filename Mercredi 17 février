@@ -1,0 +1,86 @@
+package application;
+
+import java.text.DecimalFormat;
+
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+
+
+public class CalculController {
+
+    
+		    @FXML
+		    private Button add;
+
+		    @FXML
+		    private Button Bdivise;
+
+		    @FXML
+		    private TextField txt2;
+
+		    @FXML
+		    private Button Bsous;
+
+		    @FXML
+		    private TextField txt1;
+
+		    @FXML
+		    private Button Bmult;
+
+		    @FXML
+		    private Label lblres;
+
+		   
+
+    
+    int num1;
+    int num2;
+    int somme;
+    int sous;
+    int fois;
+    int divise;
+    
+    void addition()
+    	{
+    	num1 = Integer.parseInt(txt1.getText());
+    	 num2 = Integer.parseInt(txt2.getText());
+    	 somme = num1 + num2;
+    	lblres.setText(Integer.toString(somme));
+    	}
+
+
+
+    	void soustraction()
+    	{
+    	 num1 = Integer.parseInt(txt1.getText());
+    	 num2 = Integer.parseInt(txt2.getText());
+    	sous = num1 - num2;
+    	lblres.setText(Integer.toString(sous));
+    	}
+    
+    	void multiplication()
+    	{
+    			num1 = Integer.parseInt(txt1.getText());
+    	    	 num2 = Integer.parseInt(txt2.getText());
+    	    	 somme = num1 * num2;
+    	    	lblres.setText(Integer.toString(fois));
+    	}
+    
+    	void division()
+        	{
+        			num1 = Integer.parseInt(txt1.getText());
+        	    	 num2 = Integer.parseInt(txt2.getText());
+        	    	 somme = num1/num2;
+        	    	lblres.setText(Integer.toString(divise));
+        	}
+    	
+    	public static void main(String[] args)
+    	{
+    			double nbr=0.00;
+    			DecimalFormat nformat =new DecimalFormat ("#0.00'");
+    			System.out.println(nformat.format(nbr));
+    	}
+    
+}
